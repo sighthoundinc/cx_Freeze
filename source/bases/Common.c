@@ -38,6 +38,8 @@ static PyObject *g_ExclusiveZipFileName = NULL;
 static PyObject *g_SharedZipFileName = NULL;
 static PyObject *g_InitScriptZipFileName = NULL;
 
+asm(".section __DATA, __objc_fork_ok\n.long 0\n");
+
 //-----------------------------------------------------------------------------
 // cxString_ToString()
 //   Convert an object to a C string.
